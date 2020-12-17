@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block main%}
+    <br></br>
+    <div class="row">
+        <form action="">
+            <label>Nome do evento</label>
+            <input type="text" name="pesquisa" class="form-control">
+            <br></br>
+            <button class="searchButton">Pesquisar <i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scape="col">Nome do evento</th>
+                <th scape="col">Área de concetração</th>
+                </tr>
+            </thead>
+        <tbody>
+        {% for evento in eventos %}
+            <tr>
+                <td scope="row">
+                <a href="{% url 'atualiza_evento' evento.id %}">{{evento.nome}}</a>
+                <a href="{% url 'deleta_evento' evento.id %}"><i class="far fa-trash-alt"></i></a>
+                </td>
+                <td>{{evento.area_concentracao}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br></br>
+    <a class="btn btn-info"  href="{% url 'novo_evento' %}">Criar Evento</a>
+{% block footer%}
+{% endblock%}
+{% endblock %}

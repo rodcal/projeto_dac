@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block main%}
+    <h1> Tem certeza que deseja deletar o registro abaixo? </h1>
+    <form method="POST">
+    {% csrf_token %}
+    {{ form_edicao |bootstrap }}
+    <br></br>
+    <button type="submit">Deletar <i class="far fa-trash-alt"></i></button>
+    </form>
+{% endblock%}

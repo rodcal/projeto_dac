@@ -1,0 +1,20 @@
+body{
+    background-color:#F3F3F3;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+.fixed-bottom {
+    background-color: #131313;
+    height:50px;
+}
+.fixed-bottom span{
+    color:white!important;
+    padding:10px;
+}
+.fixed-bottom i{
+    color:rgb(255, 255, 255);
+    margin:7px;
+    text-align: right;
+    float:right;
+}

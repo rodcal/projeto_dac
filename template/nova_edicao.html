@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block main%}
+    <br></br>
+    <form method="POST">
+    <h2 style="text-align:center">Cadastro de Edição de evento</h2>
+    {% csrf_token %}
+    {{ form_edicao|bootstrap }}
+    <br></br>
+    <button type="submit" class="btn btn-primary">Criar nova edição de evento</button>
+    </form>
+{% endblock %}

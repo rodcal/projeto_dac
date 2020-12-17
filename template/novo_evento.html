@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title %}Cadastra Evento{% endblock %}
+{% block main%}
+    <br></br>
+    <form method="POST">
+    <h2 style="text-align:center">Cadastro de Eventos</h2>
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <br></br>
+    <button type="submit" class="btn btn-primary">Criar Evento</button>
+    </form>
+{% block footer%}
+{% endblock %}
+{% endblock %}

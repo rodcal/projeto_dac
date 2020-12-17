@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block main%}
+    <br></br>
+    <div>
+        <form action="">
+            <label>Nome da cidade</label>
+            <input type="text" name="pesquisa_cidade" class="form-control" >
+            <br></br>
+            <label>Data do inicio da edição</label>
+            <input type="date" name="pesquisa_data_inicio" class="form-control">
+            <br></br>
+            <label>Data do fim da edição</label>
+            <input type="date" name="pesquisa_data_fim" class="form-control">
+            <br></br>
+            <button class="searchButton">Pesquisar <i class="fa fa-search"></i></button>
+        </form>
+    </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scape="col">Lista de edições</th>
+                    <th scape="col">Data inicio</th>
+                    <th scape="col">Data término</th>
+                </tr>
+            </thead>
+        <tbody>
+        {% for edicao in edicaos %}
+            <tr>
+
+                <td scope="row"<a href="{% url 'atualiza_edicao' edicao.id %}">{{edicao}}</a>
+                <a href="{% url 'deleta_edicao' edicao.id %}"><i class="far fa-trash-alt"></i></a></td>
+                <td>{{edicao.data_inicio}}</td>
+                <td>{{edicao.data_fim}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    <br></br>
+    <a class="btn btn-info" href="{% url 'nova_edicao' %}">Criar nova edição de evento</a>
+{% endblock %}

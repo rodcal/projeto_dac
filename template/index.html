@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block title%}Ache seu evento{% endblock %}
+{% block main %}
+<br></br>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/img1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/img2.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/img3.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+<br></br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h4 style="text-align:center">Motivação</h4>
+            <p class="text-color"> Somos um site que visa ligar pessoas a eventos, nossa principal motivação é ligar você a sua tribo!</p>
+        </div>
+        <div class="col-sm">
+            <h4 style="text-align:center">Sobre</h4>
+            <p> Sou um programador indepedente que tem como objetivo facilitar que organizadores de eventos conversem com seu público</p)
+        </div>
+</div>
+{% block footer %}
+    <div class="fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm">
+                <span class="text-muted">Desenvolvido por Rodrigo Cavote</span>
+                </div>
+                <div class="col-sm">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
+
+{% endblock %}
+
